@@ -96,7 +96,11 @@ footer .signature {
 }
 
 footer .signature svg {
-  height: 1.75em;
+  height: 2em;
+}
+
+footer .signature svg:hover {
+  animation: wiggle 0.5s;
 }
 
 footer .quote {

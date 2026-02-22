@@ -15,3 +15,7 @@
     transform: skew(0deg);
   }
 }
+
+.wiggle {
+  animation: wiggle 0.5s;
+}

@@ -26,6 +26,7 @@
 /* animations */
 @import "animations/wiggle.css" layer(animations);
 @import "animations/glitch.css" layer(animations);
+@import "animations/blink.css" layer(animations);
 
 /** Blog specific CSS for examples */
 @import "blog/dock-hover.css" layer(blog);
