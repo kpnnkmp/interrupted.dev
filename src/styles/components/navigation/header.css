@@ -17,33 +17,27 @@ header.main-header {
       text-decoration: none;
     }
 
-    &:is(:hover, :focus) .lettermark path {
-      fill: var(--color-link);
-    }
-
-    &:is(:hover, :focus) svg.crinkle:first-child {
-      animation: wiggle 0.4s;
-    }
-
-    &:is(:hover, :focus) svg.crinkle:last-of-type {
-      animation: wiggle-reverse 0.6s;
-    }
-
-    svg.crinkle {
-      transition: transform var(--duration-3);
-    }
-
-    svg {
-      height: var(--size-subheader);
+    svg.glyph {
+      height: var(--size-header);
     }
 
     svg.lettermark {
       height: calc(1.1 * var(--size-subheader));
       margin-bottom: 0.35em;
+
+      path {
+        transition: all var(--duration-3);
+      }
     }
 
-    path {
-      transition: all var(--duration-3);
+    &:is(:hover, :focus) {
+      .glyph {
+        animation: wiggle 0.4s;
+      }
+
+      .lettermark path {
+        fill: var(--color-link);
+      }
     }
   }
 

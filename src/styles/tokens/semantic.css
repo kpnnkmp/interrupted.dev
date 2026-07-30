@@ -13,7 +13,6 @@
   --color-heading: var(--p-orange-0);
   --color-button: light-dark(var(--p-orange-1), var(--p-orange-0));
   --color-glyph: light-dark(var(--p-green-2), var(--p-orange-0));
-  --color-glyph-reverse: light-dark(var(--p-orange-0), var(--p-green-2));
   --color-interactive: var(--color-glyph);
   --color-divider: var(--color-surface-2);
   --color-canvas: light-dark(var(--p-green-2), var(--p-orange-0));
