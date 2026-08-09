@@ -6,7 +6,7 @@ tags:
   - javascript
 layout: post
 description: >-
-  Andy Bell showed a nice little UI effect with his “sticky revealing footer”. However, on some pages, the experience was mediocre. A quest was started to improve it.
+  Andy Bell showed a nice little UI effect with his “sticky revealing footer”. But on some pages the experience was mediocre, so a quest began to improve it.
 ---
 
 Not too long ago, I came across a post about a [sticky revealing footer](https://piccalil.li/blog/sticky-revealing-footer/). My immediate reaction was: “I want this on my website!” And without much hesitation, it was there. You can see its effect right now.

@@ -6,7 +6,7 @@ tags:
   - layout
 layout: post
 description: >-
-  Horizontal centering is an ancient problem in CSS. With CSS Grid we are able enhance this layout pattern. But, this gives us other issues. Let's find a better solution.
+  Horizontal centering is an ancient problem in CSS. CSS Grid lets us enhance the pattern, but it introduces other issues. Let's find a better solution.
 ---
 
 In a previous [article](/writing/css-layout-patterns) I wrote about modern CSS layout solutions. As horizontal centering is a common layout pattern, the grid-based solution was a prime candidate to convert into a generic class when creating [Bace CSS](https://feo.crinkles.dev). But I encountered an issue. When combining this solution with other CSS layout patterns (e.g. the [stack](https://feo.crinkles.dev/stack) pattern) my layout would break. Both patterns are targeting the `display` property, but with different values. To allow both patterns to work together, I had to find a different solution.

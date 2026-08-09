@@ -6,7 +6,7 @@ tags:
   - architecture
 layout: post
 description: >-
-  In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix, I needed utility-enabled. Then came CUBE CSS and it all clicked.
+  My CSS architecture had become too complex, but utility-first frameworks were not for me either. I needed a mix. Then came CUBE CSS and it all clicked.
 ---
 
 For years I have used [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) as my goto CSS architecture for large projects. It helped me to keep my CSS maintainable with a small team. But in the last two years, I moved to a [utility-first](https://tailwindcss.com/) approach. More and more parts of ITCSS were left untouched and unused. At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!

@@ -6,7 +6,8 @@ tags:
   - engineering
   - architecture
 layout: post
-description: As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY. But in this quest, we often create unstable code.
+description: >-
+  As engineers we tend to over-engineer, making our code as reusable and DRY as possible. But in that quest, we often create unstable code.
 ---
 
 As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY (don't repeat yourself). Although these are good rules to go by in most cases, they can also lead to problematic maintenance issues. In our DRY-quest, we can create unstable, yet reusable code that is used in more than one place. Sometimes it is ok to write our code WET (write everything twice). Why? Because it creates more stable code around interdependencies.

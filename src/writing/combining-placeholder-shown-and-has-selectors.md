@@ -5,7 +5,7 @@ tags:
   - css
 layout: post
 description: >-
-  Yesterday my wife told me about this :placeholder-shown selector. I had visual question marks above my head because I never heard of it before. But it sparked curiosity about what it could give me.
+  My wife told me about the :placeholder-shown selector. I had never heard of it before, but it sparked my curiosity about what it could do combined with :has.
 ---
 
 Yesterday my wife (also a front-end developer) came to ask for my help with something. She read something about a `:placeholder-shown` selector and was wondering if it could solve her problem. Upon receiving the question I (almost) had visual question marks floating above my head. I never heard of this selector before. Is it new? Is it even supported? What does it do? To my surprise, I found that the first browser released support in 2015 already. Because we can use it, I started wondering what I could do with it.

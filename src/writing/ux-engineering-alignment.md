@@ -6,7 +6,7 @@ tags:
   - engineering
 layout: post
 description: >-
-  In agile we focus on the delivery of solutions. As this is the playing field of engineers, UX designers get left behind. However, we should seek more alignment with them.
+  In agile we focus on delivering solutions. That is the playing field of engineers, so UX designers get left behind. We should seek more alignment with them.
 ---
 
 Almost two years ago I wrote my [first blog post](/writing/ux-design-process-for-engineers) on this website about the alignment between UX and engineering. I got my inspiration based on a conference talk of [Steph Troeth](https://twitter.com/sniffles) on the [CSS Day of 2019](https://cssday.nl/2019). Since that time, I have learned a lot by working with UX designers. Although my initial ideas did not change, I did get a more complete picture of what the alignment between UX and engineering should and could be.

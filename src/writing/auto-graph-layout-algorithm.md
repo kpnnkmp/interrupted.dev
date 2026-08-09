@@ -4,7 +4,8 @@ date: 2021-06-10
 tags:
   - javascript
 layout: post
-description: Trying to automatically lay out a visual graph (e.g. state machine) that is human understandable is one of the most fun challenges I have ever encountered. Let me explain how I did it.
+description: >-
+  Laying out a visual graph, like a state machine, so that it stays human-readable is one of the most fun challenges I have encountered. Here is how I did it.
 ---
 
 In the last few months I worked on a finite state machine editor build on [React Flow](https://reactflow.dev/). At a certain point I wanted to import a configuration, that _magically_ visualizes the state machine. I was in the need of a _graph layout algorithm_. A few years back, I have implemented a similar feature for a workflow editor. The biggest problem to solve? Ensuring the resulting visualization is understandable and readable. This requires a solid algorithm.

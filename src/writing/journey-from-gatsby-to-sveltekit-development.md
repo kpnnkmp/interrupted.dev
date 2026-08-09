@@ -6,7 +6,7 @@ tags:
   - svelte
 layout: post
 description: >-
-  Recently I rebuild my website in SvelteKit, coming from Gatsby. Not only did I had to learn a new framework/format, I also jumped the gun and moved from a stable environment to a public beta!
+  I rebuilt my website in SvelteKit, coming from Gatsby. Not only did I have to learn a new framework, I also jumped from a stable environment to a public beta.
 ---
 
 For the last few weeks or months, I was getting restless about everything: my work, my website, the environment, the World. I had to find something to change my focus to, restore my energy. Around a week or two ago, I found the news of [SvelteKit going into public beta](https://svelte.dev/blog/sveltekit-beta). This sparked excitement in myself I had not felt in a long time. So during Easter weekend, while in a Corona lockdown, I started with a new journey. An exciting journey. I was going to learn a new framework and rebuild this website! Or at least, try.

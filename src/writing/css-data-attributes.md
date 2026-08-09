@@ -6,7 +6,7 @@ tags:
   - architecture
 layout: post
 description: >-
-  HTML data-attributes allow you to bind CSS and JavaScript more closely to each other. By utilizing this type of attribute, you can reduce the amount of JavaScript required for styling, and move this responsibility back to CSS.
+  HTML data-attributes bind CSS and JavaScript more closely. Use them to cut the JavaScript needed for styling and move that responsibility back to CSS.
 ---
 
 My [CSS architecture](/writing/my-css-architecture) is based on [CUBE CSS](https://cube.fyi). One of the layers of CUBE CSS describes _exceptions_. Although I see exceptions as an integral part of the _block_ layer, they are important nonetheless. Exceptions are often captured by targeting semantic HTML attributes or `data-*` attributes in your CSS selectors. But what do these attributes enable you to do in CSS?

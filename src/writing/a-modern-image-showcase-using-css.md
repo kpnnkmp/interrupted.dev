@@ -6,7 +6,7 @@ tags:
   - layout
 layout: post
 description: >-
-  My newest favorite way to create adaptable and flexible layouts is by using grid template areas. Especially combined with other modern CSS solutions it becomes extremely powerful. In this article, I use it to create an adaptable picture showcase that can handle many different configurations.
+  Grid template areas combined with other modern CSS make for powerful adaptable layouts. I use them here to build a picture showcase for many configurations.
 ---
 
 I am a big fan of [Andy Bell's "Be the browser's mentor, not its micromanager](https://bell.bz/be-the-browsers-mentor-not-its-micromanager/). This is one of my central principles when implementing UIs using HTML and CSS. I transferred this idea into various [layout patterns](https://feo.crinkles.dev/layouts/) in my own CSS library [Feo.css](https://feo.crinkles.dev/). But sometimes (more than I like to admit) we all need to create precise layouts, especially in marketing-heavy websites, or complex web applications.
