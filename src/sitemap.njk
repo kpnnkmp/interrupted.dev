@@ -6,11 +6,16 @@ excludeFromSitemap: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
-{%- if page.url.endsWith("/") and not page.data.excludeFromSitemap %}
+{%- if page.url.endsWith("/") and not page.data.archived and not page.data.excludeFromSitemap %}
   <url>
     <loc>{{ page.url | absoluteUrl(metadata.url) }}</loc>
-    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    <lastmod>{{ (page.data.update or page.date) | dateToRfc3339 }}</lastmod>
   </url>
 {%- endif %}
 {%- endfor %}
+{%- set newest = collections.posts[0] %}
+  <url>
+    <loc>{{ "/writing/" | absoluteUrl(metadata.url) }}</loc>
+    <lastmod>{{ (newest.data.update or newest.date) | dateToRfc3339 }}</lastmod>
+  </url>
 </urlset>

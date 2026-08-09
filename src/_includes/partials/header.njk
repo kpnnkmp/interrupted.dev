@@ -1,14 +1,15 @@
 <header class="main-header center | repel">
   <a href="/" class="logo flex --row">
     {% include "partials/signature.njk" %}
-    {% include "svg/lettermark.svg" %}
+    <span class="visually-hidden">Crinkles</span>
   </a>
 
-  <nav aria-label="Main site navigation">
+  <nav aria-label="Main">
     <ul class="hover-group-grow | cluster --gap-default">
-      <li><a href="/" {% if page.url == '/' %} aria-current="page"{% endif %}>home</a></li>
-      <li><a href="/writing" {% if page.url.includes('/writing/') %}aria-current="page"{% endif %}>blog</a></li>
-      <li><a href="/about" {% if page.url == '/about/' %}aria-current="page"{% endif %}>about</a></li>
+      <li><a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>home</a></li>
+      {# an article is inside the blog section, but is not the blog page itself #}
+      <li><a href="/writing/"{% if page.url == '/writing/' %} aria-current="page"{% elif page.url.startsWith('/writing/') %} aria-current="true"{% endif %}>blog</a></li>
+      <li><a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a></li>
     </ul>
   </nav>
 </header>

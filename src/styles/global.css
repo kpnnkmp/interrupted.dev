@@ -17,7 +17,7 @@ a {
   text-decoration-color: hsl(from var(--color-link) h s l / var(--opacity-effect));
   text-decoration-skip-ink: auto;
 
-  &:is(:hover, :focus, [aria-current="page"]) {
+  &:is(:hover, :focus, [aria-current]) {
     text-decoration-thickness: 0.625ch;
     text-underline-offset: -0.35ch;
     text-decoration-skip-ink: none;

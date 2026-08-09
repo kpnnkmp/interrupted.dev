@@ -2,5 +2,19 @@
   command = "pnpm build"
   publish = "_site/"
 
-[build.rollupOptions]
-  external = ["@netlify/blobs"]
+# The raw .md twins of every post (src/markdown.njk, linked from llms.txt) are
+# full-text duplicates. Crawlable on purpose for LLM agents, but out of the index.
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

@@ -32,6 +32,11 @@ export function getAllTags(collection, count = false) {
     .map((tag) => (count ? tag : tag[0]));
 }
 
+// posts carrying a tag; feed it `collections.posts` to exclude archived ones
+export function byTag(posts, tag) {
+  return posts.filter((post) => (post.data.tags || []).includes(tag));
+}
+
 export function objectify(str, key) {
   if (!str) return null;
   return { [key]: str };

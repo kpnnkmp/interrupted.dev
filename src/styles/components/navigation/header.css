@@ -18,7 +18,7 @@ header.main-header {
     }
 
     svg.glyph {
-      height: var(--size-header);
+      height: var(--size-glyph);
     }
 
     svg.lettermark {
@@ -41,7 +41,7 @@ header.main-header {
     }
   }
 
-  nav a:not(:is([aria-current="page"], :hover, :focus)) {
+  nav a:not(:is([aria-current], :hover, :focus)) {
     text-decoration-color: transparent;
   }
 }

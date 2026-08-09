@@ -3,13 +3,9 @@ layout: page
 eleventyExcludeFromCollections: true
 sticker: svg/sticker-book.svg
 pagination:
-  data: collections
+  data: collections.tags
   size: 1
   alias: tag
-  filter:
-    - all
-    - writing
-    - posts
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
   title: "Category: '{{ tag }}'"
@@ -18,7 +14,7 @@ eleventyComputed:
 {% set selected = tag %}
 <section class="--main | flex --column --gap-default">
   <div data-search-default>
-    {% set posts = collections[ tag ] | reverse or [] %}
+    {% set posts = collections.posts | byTag(tag) %}
     {% include "components/post-list.njk" %}
   </div>
   <ul class="post-list | flex --column --gap-huge" data-search-results data-search-tag="{{ tag }}" hidden></ul>

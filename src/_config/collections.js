@@ -1,4 +1,5 @@
 import { POSTS_PATH } from "./constants.js";
+import { getAllTags } from "./filters.js";
 
 // collection for all posts, incl. drafts option
 export function posts(collection) {
@@ -11,4 +12,10 @@ export function posts(collection) {
 
       return Adate < Bdate ? 1 : -1;
     });
+}
+
+// Drives the /tags/ pages. Built from `posts` so a tag whose only articles are
+// archived stops generating a page, rather than generating an empty one.
+export function tags(collection) {
+  return getAllTags(posts(collection));
 }

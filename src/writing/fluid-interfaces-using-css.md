@@ -12,7 +12,7 @@ description: >-
 
 ::: callout
 _Update 02-03-2023_\
-This article is archived and replaced by a [newer article](writing/a-different-approach-to-fluid-typography-and-layouts/).
+This article is archived and replaced by a [newer article](/writing/different-approaches-to-fluid-typography-and-layouts/).
 :::
 
 Responsiveness should be a core feature of any website. Screen-sizes are both growing and shrinking. This makes that responsiveness now goes beyond composition and layout. We need to adjust the sizes of text and elements and the surrounding spacing. Most achieve this by adding media-queries. But with various pages, elements, and breakpoints, adding media-queries become unmaintainable.

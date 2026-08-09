@@ -1,6 +1,5 @@
 ---
 title: I was wrong about service workers
-pinned: true
 date: 2023-07-28
 tags:
   - javascript

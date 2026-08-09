@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title or metadata.title }} • Crinkles</title>
+    <link
+      rel="preload"
+      href="/fonts/recursive-subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" />
     <meta name="generator" content="Eleventy" />
     <meta name="color-scheme" content="light dark" />
@@ -19,15 +26,20 @@
     />
     <meta name="view-transition" content="same-origin" />
     <!-- seo -->
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
+    <meta
+      name="robots"
+      content="{{ 'noindex,follow' if noindex else 'index,follow' }}"
+    />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- links -->
-    <link rel="canonical" href="{{ metadata.url }}" />
+    <link
+      rel="canonical"
+      href="{{ canonical or (page.url | absoluteUrl(metadata.url)) }}"
+    />
     <link rel="me" href="https://indieweb.social/@crinkles" />
     <link rel="me" href="https://front-end.social/@crinkles" />
     <link
@@ -37,25 +49,54 @@
       title="{{ metadata.title }}"
     />
     <!-- page data -->
+    {%- set isPost = page.url.startsWith("/writing/") and page.url != "/writing/" %}
     <meta
       name="description"
       content="{{ description or metadata.description }}"
     />
-    <meta name="keywords" content="{{ metadata.keywords }}" />
-    <meta name="content" content="{{ metadata.keywords }}" />
-    <meta name="property" content="{{ metadata.keywords }}" />
     <!-- OG -->
     <meta property="og:site_name" content="{{ metadata.site }}" />
-    <meta property="og:url" content="{{ metadata.url }}" />
+    <meta property="og:type" content="{{ 'article' if isPost else 'website' }}" />
+    <meta property="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}" />
     <meta property="og:title" content="{{ title or metadata.title }}" />
     <meta
       property="og:description"
       content="{{ description or metadata.description }}"
     />
     <meta property="og:image" content="{{ metadata.social.img }}" />
-
-    <!-- FONTS -->
-    <link href="/fonts/recursive-subset.woff2" rel="preload" type="font/woff2" as="font">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="{{ metadata.site }} — {{ metadata.title }}"
+    />
+    {%- if isPost %}
+    <meta property="article:published_time" content="{{ date | dateToRfc3339 }}" />
+    <meta
+      property="article:modified_time"
+      content="{{ (update or date) | dateToRfc3339 }}"
+    />
+    {%- endif %}
+    <!-- Opts into the large card on X/Discord; the rest falls back to og:* -->
+    <meta name="twitter:card" content="summary_large_image" />
+    {%- if isPost %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ title | dump | safe }},
+        "description": {{ (description or metadata.description) | dump | safe }},
+        "url": "{{ page.url | absoluteUrl(metadata.url) }}",
+        "datePublished": "{{ date | dateToRfc3339 }}",
+        "dateModified": "{{ (update or date) | dateToRfc3339 }}",
+        "author": {
+          "@type": "Person",
+          "name": {{ metadata.author.name | dump | safe }},
+          "url": "{{ metadata.author.url }}"
+        }
+      }
+    </script>
+    {%- endif %}
   </head>
 
   <body>
