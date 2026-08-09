@@ -20,10 +20,4 @@
     background-color: var(--callout-bg);
     color: var(--callout-text);
   }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-    text-decoration-color: var(--color-text-0);
-  }
 }
