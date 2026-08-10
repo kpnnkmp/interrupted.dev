@@ -21,11 +21,7 @@ footer {
     }
 
     &::before {
-      content: "~\/{";
-    }
-
-    &::after {
-      content: "}";
+      content: "~\/";
     }
   }
 }

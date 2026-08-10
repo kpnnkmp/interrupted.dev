@@ -3,13 +3,13 @@
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(-10deg);
+    transform: rotate(-14deg);
   }
   60% {
-    transform: rotate(8deg);
+    transform: rotate(11deg);
   }
   80% {
-    transform: rotate(-4deg);
+    transform: rotate(-6deg);
   }
   100% {
     transform: rotate(0deg);
@@ -21,13 +21,13 @@
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(10deg);
+    transform: rotate(14deg);
   }
   60% {
-    transform: rotate(-8deg);
+    transform: rotate(-11deg);
   }
   80% {
-    transform: rotate(4deg);
+    transform: rotate(6deg);
   }
   100% {
     transform: rotate(0deg);
