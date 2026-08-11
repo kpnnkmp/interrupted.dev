@@ -18,13 +18,8 @@ header.main-header {
       height: var(--size-glyph);
     }
 
-    &:is(:hover, :focus) {
-      .glyph:first-of-type {
-        animation: wiggle 0.6s;
-      }
-      .glyph:last-of-type {
-        animation: wiggle-reverse 0.8s;
-      }
+    &:is(:hover, :focus) .glyph {
+      animation: wiggle 0.6s;
     }
   }
 

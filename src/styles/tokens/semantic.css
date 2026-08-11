@@ -12,9 +12,8 @@
   --color-title: var(--color-text-0);
   --color-heading: var(--p-orange-0);
   --color-button: light-dark(var(--p-orange-1), var(--p-orange-0));
-  --color-glyph-fg: light-dark(var(--p-green-2), var(--p-orange-0));
-  --color-glyph-bg: light-dark(var(--p-orange-0), var(--p-green-1));
-  --color-interactive: var(--color-glyph-fg);
+  --color-glyph: light-dark(var(--p-green-2), var(--p-orange-0));
+  --color-interactive: var(--color-glyph);
   --color-divider: var(--color-surface-2);
   --color-canvas: light-dark(var(--p-green-2), var(--p-orange-0));
   --color-glow: hsl(from var(--color-accent) h s l / var(--opacity-background-glow));
@@ -47,7 +46,7 @@
   --size-header: var(--p-size-2);
   --size-subheader: var(--p-size-1);
   --size-small: var(--p-size--1);
-  --size-glyph: var(--p-size-0);
+  --size-glyph: var(--p-size-1);
 
   /** SPACING */
   --space-none: 0;
