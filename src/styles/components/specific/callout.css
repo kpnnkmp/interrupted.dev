@@ -1,6 +1,6 @@
 .callout {
   --callout-bg: var(--color-accent);
-  --callout-text: var(--color-surface-0);
+  --callout-text: light-dark(var(--color-text-0), var(--color-surface-0));
   --callout-label-offset: -0.675em; /* optical: lift label onto the top edge */
   --callout-label-padding: 0 6px;
 

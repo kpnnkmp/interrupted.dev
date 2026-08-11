@@ -1,5 +1,5 @@
 .section-header {
-  --header-opacity: light-dark(1, var(--opacity-effect));
+  --header-opacity: light-dark(0.6, var(--opacity-effect));
 
   font-size: var(--size-subheader);
   text-decoration: underline;
