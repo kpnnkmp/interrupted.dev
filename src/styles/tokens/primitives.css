@@ -8,13 +8,13 @@
   --p-neutral-5: hsl(220, 6%, 8%);
 
   /** BRAND COLORS */
-  --p-orange-0: #f2bf9d;
-  --p-orange-1: #dc9e7a;
-  --p-orange-2: #f56a2e;
   --p-green-0: #55e3be;
   --p-green-1: #25ac89;
   --p-green-2: #1c756a;
-  --p-yellow-0: #ffbf00;
+  --p-warm-0: #f3ad43;
+  --p-warm-1: #c0a572;
+  --p-warm-2: #e67b55;
+  --p-warm-3: #d54152;
 
   /** BREAKPOINTS (1.33 scale) */
   --p-bp-scale: 1.33;

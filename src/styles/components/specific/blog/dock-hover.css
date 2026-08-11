@@ -18,7 +18,6 @@
   height: var(--dock-hover-item-height);
   border-radius: var(--radius-small);
   background-color: var(--dock-hover-bar-color);
-  box-shadow: var(--shadow-default);
   transition: transform var(--duration-2);
 }
 

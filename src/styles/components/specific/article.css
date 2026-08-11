@@ -112,7 +112,6 @@ article {
     transform: translateX(-50%);
     width: 100vw;
     max-width: var(--article-full-bleed-width);
-    box-shadow: var(--shadow-default);
   }
 
   /** code + codeblocks */

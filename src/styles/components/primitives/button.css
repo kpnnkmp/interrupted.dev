@@ -13,7 +13,7 @@
   text-align: center;
   font-weight: var(--fw-bold);
   color: var(--button-text);
-  border-bottom: var(--bw-effect) solid var(--color-button);
+  border-bottom: var(--bw-effect) solid hsl(from var(--color-link) h s l / var(--opacity-effect));
 
   padding-block: var(--button-padding);
   transition: all var(--duration-0);

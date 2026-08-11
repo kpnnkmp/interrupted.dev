@@ -7,23 +7,22 @@
   --color-surface-1: light-dark(var(--p-neutral-1), var(--p-neutral-4));
   --color-surface-2: light-dark(var(--p-neutral-2), var(--p-neutral-3));
 
-  --color-accent: light-dark(var(--p-orange-2), var(--p-yellow-0));
-  --color-link: light-dark(var(--p-orange-2), var(--p-orange-1));
+  --color-accent: light-dark(var(--p-warm-2), var(--p-warm-0));
+  --color-link: light-dark(var(--p-warm-2), var(--p-warm-0));
   --color-title: var(--color-text-0);
-  --color-heading: var(--p-yellow-0);
-  --color-button: light-dark(var(--p-orange-2), var(--p-orange-1));
-  --color-glyph: light-dark(var(--p-orange-2), var(--p-yellow-0));
+  --color-heading: var(--p-warm-0);
+  --color-button: light-dark(var(--p-warm-2), var(--p-warm-0));
+  --color-glyph: light-dark(var(--p-warm-2), var(--p-warm-0));
   --color-interactive: var(--color-glyph);
   --color-divider: var(--color-surface-2);
-  --color-canvas: light-dark(var(--p-orange-2), var(--p-yellow-0));
-  --color-glow: hsl(from var(--color-accent) h s l / var(--opacity-background-glow));
+  --color-canvas: light-dark(var(--p-warm-2), var(--p-warm-0));
 
-  --color-code-inline: light-dark(var(--p-orange-2), var(--p-yellow-0));
+  --color-code-inline: light-dark(var(--p-warm-3), var(--p-warm-0));
   --color-code-default: var(--p-neutral-0);
   --color-code-muted: var(--p-neutral-2);
-  --color-code-primary: var(--p-yellow-0);
-  --color-code-secondary: var(--p-green-0);
-  --color-code-tertiary: var(--p-orange-0);
+  --color-code-primary: var(--p-green-0);
+  --color-code-secondary: var(--p-warm-1);
+  --color-code-tertiary: var(--p-warm-2);
   --color-code-bg: var(--p-neutral-4);
 
   /** FONT-FAMILIES */
@@ -62,11 +61,6 @@
   --layout-width: min(100%, calc(var(--p-bp-5) - 2 * var(--space-layout)));
   --layout-main-content: var(--p-bp-3);
   --layout-article: var(--p-bp-3);
-
-  /** BOX-SHADOW */
-  --shadow-y: 0px;
-  --shadow-blur: var(--p-size-3);
-  --shadow-default: 0 var(--shadow-y) var(--shadow-blur) var(--color-glow);
 
   /** BORDER-RADIUS */
   --radius-small: var(--p-radius-1);
