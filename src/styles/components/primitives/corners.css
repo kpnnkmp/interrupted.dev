@@ -1,21 +1,8 @@
-/**
- * CORNERS
- *
- * Decorative L-shaped accent brackets at a box's four corners, drawn on a
- * pseudo-element so they sit just outside the edge. The primitive names its
- * targets directly below: `.card`, and `pre` (generated code blocks can't
- * carry an opt-in class), plus a `.corners` escape hatch to opt any other
- * box in. `:where()` keeps specificity 0 so consumers still own the tokens.
- *
- * API (override on the consuming element):
- *   --corner-color      bracket color
- *   --corner-thickness  line thickness
- *   --corner-arm        length of each arm
- */
 :where(.card, pre, .corners) {
   --corner-color: var(--color-accent);
   --corner-thickness: var(--bw-effect);
   --corner-arm: var(--space-default);
+  --corner-radius: calc(var(--radius-default) + 2 * var(--corner-thickness));
 
   position: relative;
 
@@ -25,30 +12,19 @@
     inset: calc(var(--corner-thickness) * -2);
     pointer-events: none;
 
-    /* eight strips: two arms per corner */
-    background-image:
-      linear-gradient(var(--corner-color) 0 0), linear-gradient(var(--corner-color) 0 0),
-      linear-gradient(var(--corner-color) 0 0), linear-gradient(var(--corner-color) 0 0),
-      linear-gradient(var(--corner-color) 0 0), linear-gradient(var(--corner-color) 0 0),
-      linear-gradient(var(--corner-color) 0 0), linear-gradient(var(--corner-color) 0 0);
-    background-repeat: no-repeat;
-    background-size:
-      var(--corner-arm) var(--corner-thickness),
-      var(--corner-thickness) var(--corner-arm),
-      var(--corner-arm) var(--corner-thickness),
-      var(--corner-thickness) var(--corner-arm),
-      var(--corner-arm) var(--corner-thickness),
-      var(--corner-thickness) var(--corner-arm),
-      var(--corner-arm) var(--corner-thickness),
-      var(--corner-thickness) var(--corner-arm);
-    background-position:
-      top left,
+    border: var(--corner-thickness) solid var(--corner-color);
+    border-radius: var(--corner-radius);
+
+    /* square side: curve + straight run */
+    --corner-square: calc(1.5 * var(--corner-radius));
+    --corner-mask: linear-gradient(#000 0 0);
+    mask-image: var(--corner-mask), var(--corner-mask), var(--corner-mask), var(--corner-mask);
+    mask-size: var(--corner-square) var(--corner-square);
+    mask-position:
       top left,
       top right,
-      top right,
       bottom left,
-      bottom left,
-      bottom right,
       bottom right;
+    mask-repeat: no-repeat;
   }
 }

@@ -8,6 +8,7 @@
   position: relative;
   width: 100%;
   max-width: var(--card-width, var(--layout-main-content));
+  border-radius: var(--radius-default);
 
   /* corner brackets applied centrally in corners.css */
 

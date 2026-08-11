@@ -3,7 +3,7 @@ pre {
 
   background-color: var(--color-code-bg);
   color: var(--color-code-default);
-  border-radius: 0;
+  border-radius: var(--radius-default);
 
   /* corner brackets applied centrally in corners.css */
 

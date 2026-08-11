@@ -112,6 +112,11 @@ article {
     transform: translateX(-50%);
     width: 100vw;
     max-width: var(--article-full-bleed-width);
+    border-radius: var(--radius-default);
+  }
+
+  :where(pre) {
+    width: calc(100vw - 4 * var(--bw-effect));
   }
 
   /** code + codeblocks */

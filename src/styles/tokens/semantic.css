@@ -64,6 +64,7 @@
 
   /** BORDER-RADIUS */
   --radius-small: var(--p-radius-1);
+  --radius-default: var(--p-radius-3);
 
   /** BORDER-WIDTH */
   --bw-default: 1px;
