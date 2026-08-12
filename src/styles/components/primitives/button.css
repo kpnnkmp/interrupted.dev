@@ -6,28 +6,14 @@
  */
 
 .btn {
-  --button-padding: 2px;
   --button-text: var(--color-text-0);
 
-  text-decoration: none;
   text-align: center;
   font-weight: var(--fw-bold);
   color: var(--button-text);
-  border-bottom: var(--bw-effect) solid hsl(from var(--color-link) h s l / var(--opacity-effect));
-
-  padding-block: var(--button-padding);
-  transition: all var(--duration-0);
-  line-height: 1;
-
-  &::after {
-    content: "→";
-    margin-left: var(--space-small);
-  }
 }
 
 .btn:is(:hover, :focus) {
-  --button-text: var(--color-button);
-
   transform: scale(1.05);
 }
 

@@ -3,7 +3,7 @@ article {
   --article-max-width: var(--layout-article);
   --article-padding: var(--space-default);
   --article-full-bleed-width: calc(var(--article-max-width) + 2 * var(--article-padding));
-  --article-link-opacity: var(--opacity-light);
+  --article-link-opacity: var(--opacity-effect);
   --article-quote-bar: 5px; /* decorative blockquote accent bar width */
 
   container-type: inline-size;
@@ -39,12 +39,12 @@ article {
       }
     }
 
-    &:hover {
-      color: var(--color-heading);
+    &:has(a):hover {
+      color: var(--color-link);
 
       a {
         opacity: 1;
-        color: var(--color-heading);
+        color: var(--color-link);
       }
     }
   }
@@ -111,12 +111,8 @@ article {
     margin-left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    max-width: var(--article-full-bleed-width);
+    max-width: min(calc(100vw - 2 * var(--space-layout)), var(--article-full-bleed-width));
     border-radius: var(--radius-default);
-  }
-
-  :where(pre) {
-    width: calc(100vw - 4 * var(--bw-effect));
   }
 
   /** code + codeblocks */

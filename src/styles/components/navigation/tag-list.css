@@ -13,6 +13,11 @@
     content: "#";
     font-size: var(--tag-prefix-size);
     color: var(--color-link);
+    transition: color var(--duration-1) ease;
+  }
+
+  a:hover::before {
+    color: var(--color-interactive);
   }
 
   a[data-selected="true"] {

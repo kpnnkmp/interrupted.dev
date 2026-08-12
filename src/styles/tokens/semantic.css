@@ -10,10 +10,12 @@
   --color-accent: light-dark(var(--p-warm-2), var(--p-warm-0));
   --color-link: light-dark(var(--p-warm-2), var(--p-warm-0));
   --color-title: var(--color-text-0);
-  --color-heading: var(--p-warm-0);
+  --color-interactive: light-dark(
+    color-mix(in oklab, var(--p-warm-0) 75%, var(--color-surface-0)),
+    color-mix(in oklab, var(--p-warm-2) 65%, var(--color-surface-0))
+  );
   --color-button: light-dark(var(--p-warm-2), var(--p-warm-0));
   --color-glyph: light-dark(var(--p-warm-2), var(--p-warm-0));
-  --color-interactive: var(--color-glyph);
   --color-divider: var(--color-surface-2);
   --color-canvas: light-dark(var(--p-warm-2), var(--p-warm-0));
 
@@ -57,6 +59,7 @@
   --space-huge: var(--p-size-4);
 
   /** LAYOUT */
+  --layout-sidebar: var(--p-bp-0);
   --layout-small: var(--p-bp-1);
   --layout-width: min(100%, calc(var(--p-bp-5) - 2 * var(--space-layout)));
   --layout-main-content: var(--p-bp-3);

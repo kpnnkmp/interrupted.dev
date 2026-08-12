@@ -13,7 +13,7 @@ main[data-layout="page"],
 main[data-layout="post"],
 main[data-layout="paginated"] {
   --sticker-size: 175px;
-  --sidebar-width: 275px;
+  --sidebar-width: var(--layout-sidebar);
 
   display: grid;
   row-gap: var(--space-huge);

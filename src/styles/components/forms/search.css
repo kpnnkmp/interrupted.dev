@@ -1,7 +1,7 @@
 search {
   --search-rule: var(--color-divider);
   --search-glyph: var(--color-glyph);
-  --search-interaction: var(--color-interactive);
+  --search-interaction: var(--color-link);
   --search-text: var(--color-text-0);
   --search-placeholder: var(--color-text-2);
 

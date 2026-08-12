@@ -19,5 +19,6 @@
     padding: var(--callout-label-padding);
     background-color: var(--callout-bg);
     color: var(--callout-text);
+    border-radius: var(--radius-small);
   }
 }
