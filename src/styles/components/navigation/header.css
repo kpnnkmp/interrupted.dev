@@ -15,12 +15,16 @@ header.main-header {
     }
 
     svg.lettermark {
-      height: var(--size-small);
+      height: var(--size-glyph);
       inline-size: auto;
+
+      path {
+        transition: all var(--duration-1) ease;
+      }
     }
 
-    &:is(:hover, :focus) .glyph {
-      animation: wiggle 0.6s;
+    &:is(:hover, :focus) .lettermark path {
+      fill: var(--color-glyph) !important;
     }
   }
 
