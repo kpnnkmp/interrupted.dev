@@ -6,16 +6,17 @@ header.main-header {
 
   a.logo {
     --layout-gap: 0.4em;
-
     align-items: center;
     color: var(--color-text-0);
-    position: relative;
-    font-family: var(--monospace);
-    font-variation-settings: var(--font-vars-logo);
-    text-decoration: none;
 
     svg.glyph {
       height: var(--size-glyph);
+      inline-size: auto;
+    }
+
+    svg.lettermark {
+      height: var(--size-small);
+      inline-size: auto;
     }
 
     &:is(:hover, :focus) .glyph {
