@@ -7,14 +7,15 @@
   --color-surface-1: light-dark(var(--p-neutral-1), var(--p-neutral-4));
   --color-surface-2: light-dark(var(--p-neutral-2), var(--p-neutral-3));
 
-  --color-accent: light-dark(var(--p-green-1), var(--p-green-1));
+  --color-accent: light-dark(var(--p-green-1), var(--p-green-0));
   --color-link: light-dark(var(--p-orange-1), var(--p-orange-0));
+  --color-nav: light-dark(var(--p-green-0), var(--p-green-2));
   --color-title: var(--color-text-0);
   --color-divider: var(--color-surface-2);
-  --color-interactive: light-dark(var(--p-green-0), var(--p-green-2));
+  --color-interactive: light-dark(var(--p-orange-0), var(--p-orange-2));
   --color-glyph: light-dark(var(--p-green-2), var(--p-green-0));
-  --color-disk: light-dark(var(--p-orange-1), var(--p-orange-0));
-  --color-canvas: light-dark(var(--p-orange-1), var(--p-green-1));
+  --color-disk: light-dark(var(--p-green-0), var(--p-green-2));
+  --color-canvas: light-dark(var(--p-orange-2), var(--p-green-1));
 
   --color-code-inline: light-dark(var(--p-green-2), var(--p-green-0));
   --color-code-default: var(--p-neutral-0);
@@ -44,7 +45,7 @@
   --size-header: var(--p-size-2);
   --size-subheader: var(--p-size-1);
   --size-small: var(--p-size--1);
-  --size-glyph: var(--p-size-0);
+  --size-glyph: var(--p-size-1);
 
   /** SPACING */
   --space-none: 0;
@@ -68,7 +69,7 @@
 
   /** BORDER-WIDTH */
   --bw-default: 1px;
-  --bw-effect: 2px;
+  --bw-effect: 3px;
 
   /** OPACITY */
   --opacity-background-glow: 10%;

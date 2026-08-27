@@ -14,17 +14,8 @@ header.main-header {
       inline-size: auto;
     }
 
-    svg.lettermark {
-      height: var(--size-glyph);
-      inline-size: auto;
-
-      path {
-        transition: all var(--duration-1) ease;
-      }
-    }
-
-    &:is(:hover, :focus) .lettermark path {
-      fill: var(--color-glyph) !important;
+    &:is(:hover, :focus) .glyph {
+      animation: wiggle 0.4s;
     }
   }
 

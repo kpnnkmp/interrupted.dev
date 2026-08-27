@@ -10,10 +10,11 @@
   /** BRAND COLORS */
   --p-green-0: #86b391;
   --p-green-1: #5aa395;
-  --p-green-2: #2a5c52;
+  --p-green-2: #36776a;
   --p-yellow-0: #ffbf00;
-  --p-orange-0: #e27e53;
-  --p-orange-1: #d96236;
+  --p-orange-0: #e1ba92;
+  --p-orange-1: #e27e53;
+  --p-orange-2: #e15e2e;
 
   /** BREAKPOINTS (1.33 scale) */
   --p-bp-scale: 1.33;

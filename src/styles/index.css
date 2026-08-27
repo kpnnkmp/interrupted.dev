@@ -20,6 +20,7 @@
 /** components */
 @import "components/primitives/button.css" layer(components);
 @import "components/primitives/corners.css" layer(components);
+@import "components/primitives/link.css" layer(components);
 @import "components/primitives/section-header.css" layer(components);
 @import "components/containers/card.css" layer(components);
 @import "components/containers/page.css" layer(components);

@@ -1,0 +1,21 @@
+a {
+  color: inherit;
+  transition: all var(--duration-0);
+  text-underline-offset: 0.125em;
+  text-decoration-color: var(--color-link);
+  text-decoration-skip-ink: auto;
+
+  &:is(:hover, :focus) {
+    text-decoration-thickness: 0.625ch;
+    text-underline-offset: -0.35ch;
+    text-decoration-skip-ink: none;
+    text-decoration-color: var(--color-interactive);
+  }
+}
+
+a[aria-current] {
+  text-decoration-thickness: 0.625ch;
+  text-underline-offset: -0.35ch;
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--color-nav);
+}
