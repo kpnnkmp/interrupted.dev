@@ -1,17 +1,19 @@
 :root {
   /** NEUTRAL */
-  --p-neutral-0: hsl(40, 14%, 98%);
-  --p-neutral-1: hsl(40, 12%, 92%);
-  --p-neutral-2: hsl(38, 9%, 78%);
-  --p-neutral-3: hsl(220, 4%, 34%);
-  --p-neutral-4: hsl(220, 5%, 18%);
-  --p-neutral-5: hsl(220, 6%, 8%);
+  --p-neutral-0: #faf9f8;
+  --p-neutral-1: #edebe8;
+  --p-neutral-2: #ccc9c2;
+  --p-neutral-3: #455c68;
+  --p-neutral-4: #21323b;
+  --p-neutral-5: #101618;
 
   /** BRAND COLORS */
-  --p-green-0: #55e3be;
+  --p-green-0: #86b391;
+  --p-green-1: #5aa395;
+  --p-green-2: #2a5c52;
   --p-yellow-0: #ffbf00;
-  --p-sand-0: #e1ba92;
-  --p-orange-0: #e96131;
+  --p-orange-0: #e27e53;
+  --p-orange-1: #d96236;
 
   /** BREAKPOINTS (1.33 scale) */
   --p-bp-scale: 1.33;
