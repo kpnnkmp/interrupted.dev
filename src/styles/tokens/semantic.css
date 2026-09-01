@@ -34,10 +34,9 @@
   --fw-regular: var(--p-fw-4);
   --fw-bold: var(--p-fw-7);
 
-  --font-vars-default: "MONO" 0, "CASL" 0.5, "slnt" 0, "CRSV" 0;
-  --font-vars-header: "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
+  --font-vars-default: "MONO" 0.25, "CASL" 0.15, "slnt" 0, "CRSV" 0;
+  --font-vars-header: "MONO" 0, "CASL" 0.3, "slnt" 0, "CRSV" 1;
   --font-vars-code: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0;
-  --font-vars-logo: "MONO" 0.5, "CASL" 0.5, "slnt" 0, "wght" 600, "CRSV" 1;
 
   /** FONT-SIZES */
   --size-body: var(--p-size-0);
