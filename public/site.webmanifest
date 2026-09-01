@@ -1,7 +1,12 @@
 {
+  "name": "Crinkles — Kevin Pennekamp",
+  "short_name": "Crinkles",
+  "start_url": "/",
+  "display": "minimal-ui",
   "icons": [
     { "src": "/icon-192x192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512x192.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/icon-512x512.png", "type": "image/png", "sizes": "512x512" }
   ],
-  "theme_color": "#111418"
+  "theme_color": "#111418",
+  "background_color": "#111418"
 }

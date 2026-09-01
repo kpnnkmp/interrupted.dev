@@ -2,7 +2,8 @@
 <html lang="{{ metadata.language }}">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="text-scale" content="scale" />
     <title>{{ title or metadata.title }} • Crinkles</title>
     <link
       rel="preload"
@@ -12,7 +13,6 @@
       crossorigin
     />
     <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" />
-    <meta name="generator" content="Eleventy" />
     <meta name="color-scheme" content="light dark" />
     <meta
       name="theme-color"
@@ -32,7 +32,7 @@
     />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- links -->
@@ -54,6 +54,7 @@
       name="description"
       content="{{ description or metadata.description }}"
     />
+    <meta property="fediverse:creator" content="@crinkles@front-end.social" />
     <!-- OG -->
     <meta property="og:site_name" content="{{ metadata.site }}" />
     <meta property="og:type" content="{{ 'article' if isPost else 'website' }}" />
@@ -71,6 +72,11 @@
       content="{{ metadata.site }} — {{ metadata.title }}"
     />
     {%- if isPost %}
+    <link
+      rel="alternate"
+      type="text/markdown"
+      href="{{ ("/writing/" + page.fileSlug + ".md") | absoluteUrl(metadata.url) }}"
+    />
     <meta property="article:published_time" content="{{ date | dateToRfc3339 }}" />
     <meta
       property="article:modified_time"
