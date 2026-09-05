@@ -79,3 +79,11 @@
     }
   }
 }
+
+/* Narrow screens: the monospace labels, not the bars, are what overflows.
+   Keep the six most recent columns and drop the rest. */
+@media (--bp-chart-compact) {
+  .chart tbody tr:nth-last-child(n + 7) {
+    display: none;
+  }
+}

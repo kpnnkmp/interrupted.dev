@@ -1,5 +1,7 @@
 ---
 layout: base
+eleventyImport:
+  collections: ["allPosts", "archived"]
 ---
 
 {%- set s = collections.allPosts | stats %}

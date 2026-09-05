@@ -1,4 +1,5 @@
 /* site breaking */
 @custom-media --bp-showcase-compact (width < 500px);
+@custom-media --bp-chart-compact (width < 500px);
 @custom-media --bp-pagination (width < 670px);
 @custom-media --bp-layout (width < 840px);
