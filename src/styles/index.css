@@ -25,6 +25,8 @@
 @import "components/containers/card.css" layer(components);
 @import "components/containers/page.css" layer(components);
 @import "components/containers/post-list.css" layer(components);
+@import "components/data/chart.css" layer(components);
+@import "components/data/datacard.css" layer(components);
 @import "components/forms/search.css" layer(components);
 @import "components/navigation/header.css" layer(components);
 @import "components/navigation/pagination.css" layer(components);

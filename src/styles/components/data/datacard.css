@@ -1,0 +1,16 @@
+.datacard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .caption {
+    font-size: var(--size-small);
+    text-transform: uppercase;
+    color: var(--color-text-2);
+  }
+
+  .value {
+    font-weight: var(--fw-bold);
+    font-size: var(--size-header);
+  }
+}

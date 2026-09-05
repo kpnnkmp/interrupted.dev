@@ -10,7 +10,8 @@
     "build": "npx @11ty/eleventy",
     "format": "npx prettier --write --ignore-unknown",
     "audit": "npx @sandworm/audit@latest --fail-on='[\"*.critical\", \"*.high\"]'",
-    "favicons": "node ./src/_setup/generate-favicons.js"
+    "favicons": "node ./src/_setup/generate-favicons.js",
+    "test": "node --test src/**/*.test.js"
   },
   "keywords": [],
   "author": "Kevin Pennekamp<kevin@crinkles.dev>",

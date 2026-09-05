@@ -17,6 +17,10 @@
     text-transform: uppercase;
     color: var(--color-text-2);
   }
+
+  &[data-width="full"] {
+    --card-width: 100%;
+  }
 }
 @media (--bp-layout) {
   .card {

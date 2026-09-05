@@ -116,12 +116,6 @@ article {
   }
 
   /** code + codeblocks */
-  code {
-    font-weight: var(--fw-regular);
-    font-family: var(--monospace);
-    font-variation-settings: var(--font-vars-code);
-  }
-
   :not(pre) > code {
     color: var(--color-code-inline);
   }

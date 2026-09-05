@@ -37,6 +37,12 @@ i,
   font-variation-settings: "CRSV" 1;
 }
 
+code {
+  font-weight: var(--fw-regular);
+  font-family: var(--monospace);
+  font-variation-settings: var(--font-vars-code);
+}
+
 ::selection {
   color: var(--color-surface-0);
   background: var(--color-text-0);

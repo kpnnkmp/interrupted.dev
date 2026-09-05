@@ -123,3 +123,63 @@ export function searchIndex(collection) {
       .join(" "),
   }));
 }
+
+// --- blog stats ---------------------------------------------------------
+
+const WPM = 200;
+// Monday-first: EU convention. getDay() is Sunday-first, hence the shift.
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+// one chart series: a row per bucket, plus the peak so the template can size
+// bars without a second pass
+function series(rows) {
+  return { rows, max: Math.max(0, ...rows.map((r) => r.count)) };
+}
+
+// Word counts and cadence over a post collection. Code samples are stripped
+// before counting, same as the search index does.
+export function stats(collection) {
+  const posts = collection.map((post) => ({
+    date: new Date(post.data.date),
+    words: stripToText(stripCode(post.templateContent))
+      .split(/\s+/)
+      .filter(Boolean).length,
+  }));
+
+  const totalWords = posts.reduce((sum, p) => sum + p.words, 0);
+  const minutes = Math.round(totalWords / WPM);
+
+  const byDay = series(
+    DAYS.map((label, i) => ({
+      label,
+      count: posts.filter((p) => (p.date.getDay() + 6) % 7 === i).length,
+    })),
+  );
+
+  // every year from first post to last, so a silent year reads as a gap
+  const years = posts.map((p) => p.date.getFullYear());
+  const span = posts.length
+    ? Array.from(
+        { length: Math.max(...years) - Math.min(...years) + 1 },
+        (_, i) => Math.min(...years) + i,
+      )
+    : [];
+  const byYear = series(
+    span.map((year) => ({
+      label: String(year),
+      count: posts.filter((p) => p.date.getFullYear() === year).length,
+    })),
+  );
+
+  // nl-NL: dot as thousands separator (1.234)
+  const fmt = (n) => n.toLocaleString("nl-NL");
+
+  return {
+    postCount: posts.length,
+    totalWords: fmt(totalWords),
+    avgWords: fmt(posts.length ? Math.round(totalWords / posts.length) : 0),
+    readingTime: `${Math.floor(minutes / 60)}h ${minutes % 60}min`,
+    byDay,
+    byYear,
+  };
+}

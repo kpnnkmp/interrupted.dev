@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+{%- set s = collections.allPosts | stats %}
+{%- from "components/chart.njk" import chart %}
+{%- from "components/datacard.njk" import datacard %}
+
+<h1 class="--title">Crinkles in numbers</h1>
+<section class="--full-width tiles --fit --gap-default card" data-width="full" style="--layout-threshold: 10rem">
+    {{ datacard('Total posts', s.postCount, "/writing/") }}
+    {{ datacard('Archived', collections.archived | length, "/archived/") }}
+    {{ datacard("Total words", s.totalWords) }}
+    {{ datacard("Avg. words", s.avgWords) }}
+    {{ datacard('Total reading time', s.readingTime) }}
+</section>
+
+<section class="--full-width card" data-width="full">
+    {{ chart("Posts per year", s.byYear, "Year") }}
+</section>
+
+  <section class="--full-width card" data-width="full">
+    {{ chart("Posts per weekday", s.byDay, "Day") }}
+</section>

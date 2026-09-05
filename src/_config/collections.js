@@ -1,17 +1,24 @@
 import { POSTS_PATH } from "./constants.js";
 import { getAllTags } from "./filters.js";
 
-// collection for all posts, incl. drafts option
-export function posts(collection) {
-  return collection
-    .getFilteredByGlob(POSTS_PATH)
-    .filter((post) => !post.data.archived)
-    .sort((a, b) => {
-      const Adate = a.data.update > a.data.date ? a.data.update : a.data.date;
-      const Bdate = b.data.update > b.data.date ? b.data.update : b.data.date;
+// every post on disk, newest first, archived included
+export function allPosts(collection) {
+  return collection.getFilteredByGlob(POSTS_PATH).sort((a, b) => {
+    const Adate = a.data.update > a.data.date ? a.data.update : a.data.date;
+    const Bdate = b.data.update > b.data.date ? b.data.update : b.data.date;
 
-      return Adate < Bdate ? 1 : -1;
-    });
+    return Adate < Bdate ? 1 : -1;
+  });
+}
+
+// the posts that still represent what I think; drives /writing/, tags and feed
+export function posts(collection) {
+  return allPosts(collection).filter((post) => !post.data.archived);
+}
+
+// the ones I've retired, listed on /archived/ and counted in /stats/
+export function archived(collection) {
+  return allPosts(collection).filter((post) => post.data.archived);
 }
 
 // Drives the /tags/ pages. Built from `posts` so a tag whose only articles are

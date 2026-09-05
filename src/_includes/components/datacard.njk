@@ -1,0 +1,14 @@
+{%- macro datacard(caption, value, href) %}
+
+  {% if href %}
+    <a class="datacard" href="{{ href }}">
+      <code class="value">{{value}}</code>
+      <span class="caption">{{caption}}</span>
+    </a>
+  {% else %}
+    <div class="datacard">
+      <code class="value">{{value}}</code>
+      <span class="caption">{{caption}}</span>
+    </div>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,25 @@
+{#- a column per bucket, sized against the series peak. `series` is a
+    { rows, max } from the `stats` filter. Roles are explicit because the
+    flex/grid layout drops the native table semantics; the value is real cell
+    text, so it reaches assistive tech whether or not it is visible. #}
+{%- macro chart(caption, series, unit) %}
+<table class="chart" role="table" style="--chart-max: {{ series.max }}">
+  <caption>{{ caption }}</caption>
+  <thead class="visually-hidden" role="rowgroup">
+    <tr role="row">
+      <th scope="col" role="columnheader">{{ unit }}</th>
+      <th scope="col" role="columnheader">Posts</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    {%- for row in series.rows %}
+    <tr role="row" style="--chart-value: {{ row.count }}">
+      <th class="chart-label" scope="row" role="rowheader">{{ row.label }}</th>
+      <td class="chart-plot" role="cell">
+        <span class="chart-bar"><span class="chart-value">{{ row.count }}</span></span>
+      </td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+{%- endmacro %}
